@@ -1,0 +1,54 @@
+// Realizar una calculadora, que sume, reste, multiple y divida
+package Condicionales;
+
+import javax.swing.JOptionPane;
+
+public class Ejercicio_9 {
+    public static void main(String[] args) {
+        char operacion ;
+        int n1, n2,suma, resta, mult, div;
+        
+        n1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero: "));
+        n2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
+        
+        operacion = JOptionPane.showInputDialog("Ingrese la operación que deseas realizar:\nSuma = S\nResta = R\nMultiplicacion = M\nDivision = D ").charAt(0);
+
+        
+        switch(operacion){
+            case 's':
+            case 'S':suma =n1+n2;
+                  JOptionPane.showMessageDialog(null, "La suma es: "+ suma);
+                  break;
+            case 'r':
+            case 'R': resta = n1-n2;
+                  JOptionPane.showMessageDialog(null, "La resta es: "+ resta);
+                  break;
+            case 'm':
+            case 'M': mult =n1*n2;
+                  JOptionPane.showMessageDialog(null, "La multiplicación es: "+ mult);
+                  break;
+            case 'd':
+            case 'D': div = n1/n2;
+                  JOptionPane.showMessageDialog(null, "La división es: "+ div);
+                  break;
+            default: JOptionPane.showMessageDialog(null, "Error, la operacion ingresada no existe");
+                  
+                          
+        /*if("s".equals(operacion)){
+            JOptionPane.showMessageDialog(null, "El resultado es: " + (n1+n2));
+        }
+        else if("r".equals(operacion)){
+            JOptionPane.showMessageDialog(null, "El resultado es: " + (n1-n2));
+        }
+        else if("m".equals(operacion)){
+            JOptionPane.showMessageDialog(null, "El resultado es: " + (n1*n2));
+        }
+        else if("d".equals(operacion)){
+            JOptionPane.showMessageDialog(null, "El resultado es: " + (n1/n2));
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Verifique la opcion ingresada");
+        }*/
+        
+        // Tambien se puede hacer con un switch
+        }
